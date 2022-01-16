@@ -1,0 +1,47 @@
+- create super user
+py manage.py createsuperuser
+
+# Запуски вертуального окружения 
+cd C:\Users\Oleg\Desktop\Prog\DjangoWeb\venv\Scripts 
+activate
+
+# Запуск отладочного сервера
+cd C:\Users\Oleg\Desktop\Prog\DjangoWeb\BabyProjectDjango_root
+python manage.py runserver
+
+# Создаём приложение (отдельный блок в проекте, выполняющий одну функцию)
+python manage.py startapp название_приложения 
+
+# После заполнения файла models.py производим миграцию
+python manage.py makemigrations
+
+# Окончательно конфертируем миграции в базу данных
+python manage.py migrate
+
+# Открываем консоль для работы с бд
+python manage.py shell
+
+# Создайм админку
+python manage.py createsuperuser
+
+# Соберём все static файлы проекта в одном месте
+python manage.py collectstatic
+
+01 234 567 891 234
+11 222 333 444 555
+
+-----
+cd C:\Users\Oleg\Desktop\Prog\DjangoWeb\venv\Scripts 
+activate
+cd C:\Users\Oleg\Desktop\Prog\DjangoWeb\BabyProjectDjango_root
+python manage.py runserver
+ 
+python manage.py makemigrations
+python manage.py migrate
+ 
+ 
+
+
+
+
+
