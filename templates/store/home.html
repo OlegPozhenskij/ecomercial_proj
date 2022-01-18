@@ -1,1 +1,11 @@
-home
+{% extends './base.html' %}
+{% comment %} Наследуемся от родительного шаблона {% endcomment %}
+
+{% load static %}
+
+{% comment %} переопределение блока {% endcomment %}
+{% block content %}
+    Homessss
+{% endblock content %}
+
+
