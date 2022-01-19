@@ -10,6 +10,7 @@ urlpatterns = [
     path('', views.all_products, name="all_products"),
     # slug1 - type of data, our_slug - name of the var, where we want to store the data and send to views!
     # прописываем только slug продукта - он присв
-    path('item/<slug:our_slug>/', views.product_details, name="product_details")
+    path('item/<slug:our_slug>/', views.product_details, name="product_details"),
+    path('search/<slug:category_slug>/', views.category_list, name="category_list"),
 ]
 
