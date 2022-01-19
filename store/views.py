@@ -13,3 +13,7 @@ def all_products(request):
     products = Product.objects.all()
     #render for loading the templates
     return render(request, 'store/home.html', {'products': products})
+
+def product_details(request, our_slug):
+    product = get_object_or_404(Product, slug=our_slug, in_stock=True)
+    return render(request, 'store/products/detail.html', {'product': product})
