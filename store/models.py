@@ -3,7 +3,6 @@ from django.db import models
 #allow us to build an url
 from django.urls import reverse
 
-
 # class ProductManager(models.Manager):
 #     def get_queryset(self):
 #         return super(ProductManager, self).get_queryset().filter(is_active=True)
