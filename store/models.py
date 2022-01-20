@@ -3,9 +3,10 @@ from django.db import models
 #allow us to build an url
 from django.urls import reverse
 
-# class ProductManager(models.Manager):
-#     def get_queryset(self):
-#         return super(ProductManager, self).get_queryset().filter(is_active=True)
+
+class ProductManager(models.Manager):
+    def get_queryset(self):
+        return super(ProductManager, self).get_queryset().filter(is_active=True)
 
 
 class Category(models.Model):
@@ -42,8 +43,9 @@ class Product(models.Model):
      # auto_now_add=True - happen once
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
-    # objects = models.Manager()
-    # products = ProductManager()
+
+    objects = models.Manager()
+    products = ProductManager()
 
     class Meta:
         verbose_name_plural = 'Products'
