@@ -60,3 +60,18 @@ class Basket():
         if product_id in self.basket:
             self.basket[product_id]['qty'] = qty
         self.save()
+
+           def __len__(self):
+        """
+        Get the basket data and count the qty of items
+        """
+        return sum(item['qty'] for item in self.basket.values())
+
+    def update(self, product, qty):
+        """
+        Update values in session data
+        """
+        product_id = str(product)
+        if product_id in self.basket:
+            self.basket[product_id]['qty'] = qty
+        self.save()
